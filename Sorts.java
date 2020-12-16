@@ -22,16 +22,19 @@ public class Sorts{
           data[i]= data[i+1];
           data[i+1] = Foward_Value;
         }
+
         if(data[i] < data[i+1])
         {
           count ++;
         }
+
       }
 
       if (count == data.length)
       {
         InOrder = true;
       }
+
       System.out.println(Arrays.toString(data));
 
     }
