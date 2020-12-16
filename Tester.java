@@ -1,5 +1,7 @@
 import java.util.Random;
 import java.util.Arrays;
+import java.io.*;
+import java.util.*;
 public class Tester{
    public static void main(String[] args)
    {
@@ -13,11 +15,11 @@ public class Tester{
       Sorts.bubbleSort(arr);
       Arrays.sort(ComputerSorted);
       System.out.println("Computer");
-      System.out.println(ComputerSorted);
+      System.out.println(Arrays.toString(ComputerSorted));
       System.out.println("");
       System.out.println("");
       System.out.println("My method:");
 
-      System.out.println(arr);
+      System.out.println(Arrays.toString(arr));
    }
 }
