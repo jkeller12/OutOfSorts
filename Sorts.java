@@ -6,7 +6,7 @@ public class Sorts{
 
 
   public static void bubbleSort(int[] data)
-  { boolean InOrder = true;
+  { boolean InOrder = false;
     while(InOrder == false)
     {
       int count = 0;
