@@ -24,13 +24,13 @@ public class Tester{
       System.out.println("");
       System.out.println("");
       System.out.println("Did your buble sort work?");
-      if(arr = ComputerSorted)
+      if(arr == ComputerSorted)
       {
         System.out.println("Yes!!!!");
       }
       else{
         System.out.println("No");
       }
-      
+
    }
 }
