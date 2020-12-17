@@ -9,16 +9,16 @@ public class CustomSortTester extends Sorts{
     I set the cases very low by default.
     */
 
-    int len = 10; // lengths of random data arrays, min 0
-    int range = 1; // range of random lengths for random arrays, min 1
+    int len = 100; // lengths of random data arrays, min 0
+    int range = 810; // range of random lengths for random arrays, min 1
     int cases = 10; // amount of repetitions for random, min 0
 
     int lenF = 10; // lengths of forwards data arrays, min 0
-    int rangeF = 1; // range of random lengths for forwards arrays, min 1
-    int casesF = 10; // amount of repetitions for forwards arrays, min 0
+    int rangeF = 190; // range of random lengths for forwards arrays, min 1
+    int casesF = 0; // amount of repetitions for forwards arrays, min 0
 
-    int lenB = 10; // lengths of backwards data arrays, min 0
-    int rangeB = 1; // range of random lengths for backwards arrays, min 1
+    int lenB = 100; // lengths of backwards data arrays, min 0
+    int rangeB = 139; // range of random lengths for backwards arrays, min 1
     int casesB = 10; // amount of repetitions for backwards arrays, min 0
 
     /*
@@ -36,7 +36,7 @@ public class CustomSortTester extends Sorts{
       nums = new Random();
       int[] data = dataMaker(nums, len, range);
       original = originalMaker(data);
-      bubbleSort(data);
+      Sorts.bubbleSort(data);
       error = checker(data, error, original);
     }
 
@@ -45,7 +45,7 @@ public class CustomSortTester extends Sorts{
       nums = new Random();
       int[] data = dataMakerF(nums, lenF, rangeF);
       original = originalMaker(data);
-      bubbleSort(data);
+      Sorts.bubbleSort(data);
       error = checker(data, error, original);
     }
 
@@ -54,7 +54,7 @@ public class CustomSortTester extends Sorts{
       nums = new Random();
       int[] data = dataMakerB(nums, lenB, rangeB);
       original = originalMaker(data);
-      bubbleSort(data);
+      Sorts.bubbleSort(data);
       error = checker(data, error, original);
     }
     if (error == 0) System.out.println("\nNo errors, but it wouldn't hurt to keep testing!");

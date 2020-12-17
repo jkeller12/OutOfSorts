@@ -24,13 +24,14 @@ public class StevenSortTester{
                 throw new Error ("failure at random test " +  i + " . \n Expected: " + Arrays.toString(clone) + " \n Received: " + Arrays.toString(arr));
             }
             //REVERSE THE ARRAYS AND CHECK IF SORT STILL WORKS
-          /*  reverse(clone);
+            reverse(clone);
             reverse(arr);
             Sorts.bubbleSort(arr);
             Arrays.sort(clone);
             if (!Arrays.equals(arr,clone)) {
                 throw new Error ("failure at reverse test " +  i + " . \n Expected: " + Arrays.toString(clone) + " \n Received: " + Arrays.toString(arr));
-            }*/
+            }
+            
             finalMessage = "------random tests passed------";
         }
         System.out.println(finalMessage);
