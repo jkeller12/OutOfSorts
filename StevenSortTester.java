@@ -3,7 +3,7 @@ public class StevenSortTester{
     public static void main(String[] args) {
         // AMOUNT OF TESTS TO RUN. CHANGE IF YOU THINK YOUR COMPUTER CAN HANDLE IT
         //
-        int testAmt = 10;
+        int testAmt = 100;
         String finalMessage = "found failed cases";
         for(int i = 0; i < testAmt; i++){
             Random seed = new Random(); // set the seed for element so we can trace it back if neceessary
@@ -31,8 +31,8 @@ public class StevenSortTester{
             if (!Arrays.equals(arr,clone)) {
                 throw new Error ("failure at reverse test " +  i + " . \n Expected: " + Arrays.toString(clone) + " \n Received: " + Arrays.toString(arr));
             }
-            
-            finalMessage = "------random tests passed------";
+
+            finalMessage = "------Test passed------";
         }
         System.out.println(finalMessage);
         //

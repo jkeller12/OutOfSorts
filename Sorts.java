@@ -29,13 +29,14 @@ public class Sorts{
           {
             count ++;
           }
+
           if (data[i] > data[i+1])
           {
             int Foward_Value = data[i];
             data[i]= data[i+1];
             data[i+1] = Foward_Value;
-
           }
+
         }
         ////////////////////////////////////////
         if (count == data.length-1)
