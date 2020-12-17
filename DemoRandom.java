@@ -9,11 +9,40 @@ public class DemoRandom{
       System.out.println(rng.nextInt() % 1000);
     }
     System.out.println();
+    System.out.println();
+    System.out.println();
+
 
     //specified seed can be used to reproduce sequences
+
     rng = new Random(100);//seed of 100 is stored.
+    System.out.println("Attemtp 1:");
+
     for(int i =  0; i < 5; i++ ){
       System.out.println(rng.nextInt() % 1000);
     }
+    System.out.println();
+    System.out.println();
+
+
+    rng = new Random(100);//seed of 100 is stored.
+    System.out.println("Attempt 2");
+
+    System.out.println();
+
+    for(int i =  0; i < 5; i++ ){
+      System.out.println(rng.nextInt() % 1000);
+    }
+    System.out.println();
+    System.out.println();
+
+    rng = new Random(100);//seed of 100 is stored.
+    System.out.println("Attempt 3:");
+    for(int i =  0; i < 5; i++ ){
+      System.out.println(rng.nextInt() % 1000);
+
+    }
+    System.out.println();
+
   }
 }

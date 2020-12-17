@@ -11,32 +11,32 @@ public class Sorts{
   public static void bubbleSort(int[] data)
   {
     boolean InOrder = true;
-    while(InOrder == false)
+    int count;
+
+    while(InOrder == true)
     {
-      int count = 0;
+      count = 0;
+      ///////////////////////////////////////
       for (int i = 0; i < data.length-1; i++)
       {
+        if(data[i] < data[i+1])
+        {
+          count ++;
+        }
         if (data[i] > data[i+1])
         {
           int Foward_Value = data[i];
           data[i]= data[i+1];
           data[i+1] = Foward_Value;
-        }
 
-        if(data[i] < data[i+1])
-        {
-          count ++;
         }
-
       }
-
-      if (count == data.length)
+      ////////////////////////////////////////
+      if (count == data.length-1)
       {
-        InOrder = true;
+        InOrder = false;
       }
-
       System.out.println(Arrays.toString(data));
-
     }
   }
 }
