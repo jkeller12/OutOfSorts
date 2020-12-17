@@ -36,7 +36,7 @@ public class Sorts{
       {
         InOrder = false;
       }
-      System.out.println(Arrays.toString(data));
+    //  System.out.println(Arrays.toString(data));
     }
   }
 }
