@@ -36,7 +36,7 @@ public class LimitsTester {
         // oneToSix = new int[]{5, 3, 4, 2, 1, 6};
         // Sorts.selectionSort(oneToSix);
         // System.out.println(Arrays.toString(oneToSix));
-/*
+
         for(int i = 0; i < 10000; ++i) {
             correctsquared[i] = nsquared[i] = rng.nextInt();
         }
@@ -57,6 +57,6 @@ public class LimitsTester {
             if(linear[i] > linear[i + 1]) sorted = false;
         }
         System.out.println(sorted);
-        */
+        
     }
 }
