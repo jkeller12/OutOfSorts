@@ -53,7 +53,9 @@ public class Sorts{
     for(int i = 0; i < data.length; i++)
     {
       int CorrectIndex = 0;
-      int Insert_value = data[i]; // The value getting inserted
+      //int Insert_value = data[i]; // The value getting inserted
+
+      int Insert_value = data[i];
       for (int j = 0; j < i; i++)
       {
         if( data[j] > Insert_value)
