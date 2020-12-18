@@ -6,11 +6,11 @@ public class Tester{
    public static void main(String[] args)
    {
       Random rd = new Random(); // creating Random object
-      int[] arr = new int[10];
+      int[] arr = new int[3];
 
       for (int i = 0; i < arr.length; i++)
       {
-         arr[i] = rd.nextInt(); // storing random integers in an array
+         arr[i] = 0 ;//rd.nextInt(); // storing random integers in an array
       }
       int[] ComputerSorted = arr;
       System.out.println("Before Bubble Sort");

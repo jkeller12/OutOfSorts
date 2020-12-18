@@ -10,42 +10,19 @@ public class Sorts{
 
   public static void bubbleSort(int[] data)
   {
-    boolean InOrder = true;
-    int count;
+    int length = data.length-1;
 
-    if(data.length <= 1)
+    for(int i = 0 ; i < length; i++)
     {
-      data = data;
-    }
-    else
-    {
-      while(InOrder == true)
+      for(int j = 0; j < length - i; j++)
       {
-        count = 0;
-        ///////////////////////////////////////
-        for (int i = 0; i < data.length-1; i++)
+        if (data[j] > data[j+1])
         {
-          if(data[i] < data[i+1])
-          {
-            count ++;
-          }
-
-          if (data[i] > data[i+1])
-          {
-            int Foward_Value = data[i];
-            data[i]= data[i+1];
-            data[i+1] = Foward_Value;
-          }
-
+          int Foward_Value = data[j];
+          data[j] = data[j+1];
+          data[j+1] = Foward_Value;
         }
-        ////////////////////////////////////////
-        if (count == data.length-1)
-        {
-          InOrder = false;
-        }
-      //  System.out.println(Arrays.toString(data));
       }
     }
-
   }
 }
