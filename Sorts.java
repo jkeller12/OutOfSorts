@@ -41,6 +41,7 @@ public class Sorts{
           Smallest_Index = j;
         }
       }
+
       data[Smallest_Index] = data[i];
       data[i] = Smallest;
     }
@@ -48,6 +49,26 @@ public class Sorts{
 
   public static void insertionSort(int[] data)
   {
+    // First I need to find the index it belongs.
+    for(int i = 0; i < data.length; i++)
+    {
+      int CorrectIndex = 0;
+      int value = data[i] ; // The value getting inserted
+      for (int j = 0; j < i; i++)
+      {
+        if( data[j] > value)
+        {
+          CorrectIndex = j;
+          j = i;
+        }
+      }
+      for(int j = i; j > CorrectIndex; j--)
+      {
+        data[j] = data[j-1];
 
+      }
+      data[CorrectIndex] = value;
+
+    }
   }
 }
