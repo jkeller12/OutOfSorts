@@ -50,23 +50,25 @@ public class Sorts{
   public static void insertionSort(int[] data)
   {
     // First I need to find the index it belongs.
+
     for(int i = 0; i < data.length; i++)
     {
+      System.out.println("Somethings happenig");
       int CorrectIndex = 0;
       //int Insert_value = data[i]; // The value getting inserted
-
       int Insert_value = data[i];
-      for (int j = 0; j < i; i++)
+
+      for (int j = 0; j < i; j++)
       {
         if( data[j] > Insert_value)
         {
           CorrectIndex = j;
-          j = i;
+          j = i+1;
         }
       }
-      for(int j = i; j > CorrectIndex; j--)
+      for(int k = i; k > CorrectIndex; k--)
       {
-        data[j] = data[j-1];
+        data[k] = data[k-1];
 
       }
       data[CorrectIndex] = Insert_value;
