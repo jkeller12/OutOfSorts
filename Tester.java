@@ -10,7 +10,7 @@ public class Tester{
 
       for (int i = 0; i < arr.length; i++)
       {
-         arr[i] = 0 ;//rd.nextInt(); // storing random integers in an array
+         arr[i] = rd.nextInt(); // storing random integers in an array
       }
       int[] ComputerSorted = arr;
       System.out.println("Before Bubble Sort");
