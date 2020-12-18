@@ -23,6 +23,31 @@ public class Sorts{
           data[j+1] = Foward_Value;
         }
       }
+    //  System.out.println(Arrays.toString(data));
     }
+  }
+
+  public static void selectionSort(int[] data)
+  {
+    for (int i = 0; i < data.length-1; i++)
+    {
+      int Smallest = data[i];
+      int Smallest_Index = i;
+      for(int j = i; j < data.length; j++)
+      {
+        if(data[j] < Smallest)
+        {
+          Smallest = data[j];
+          Smallest_Index = j;
+        }
+      }
+      data[Smallest_Index] = data[i];
+      data[i] = Smallest;
+    }
+  }
+
+  public static void insertionSort(int[] data)
+  {
+
   }
 }
