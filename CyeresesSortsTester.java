@@ -17,8 +17,9 @@ public class CyeresesSortsTester {
 	}
 
 	public static int[][] TestCasesCopyMachine(int[][] data) {
-		int[][] newCases = new int[data.length][data[0].length];
+		int[][] newCases = new int[data.length][];
 		for (int row = 0; row < data.length; row++) {
+			newCases[row] = new int[data[row].length];
 			for (int col = 0; col < data[row].length; col++) {
 				newCases[row][col] = data[row][col];
 			}
