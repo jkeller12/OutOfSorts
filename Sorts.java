@@ -23,7 +23,6 @@ public class Sorts{
           data[j+1] = Foward_Value;
         }
       }
-    //  System.out.println(Arrays.toString(data));
     }
   }
 
@@ -41,7 +40,6 @@ public class Sorts{
           Smallest_Index = j;
         }
       }
-
       data[Smallest_Index] = data[i];
       data[i] = Smallest;
     }
@@ -49,8 +47,6 @@ public class Sorts{
 
   public static void insertionSort(int[] data)
   {
-    // First I need to find the index it belongs.
-
     for(int i = 0; i < data.length; i++)
     {
       int CorrectIndex = i; // initalized at 0
@@ -58,28 +54,17 @@ public class Sorts{
       boolean Value = false; // Recalls if an insert should happen
 
       for (int j = 0; j < i; j++)
-      {
-        if(data[j] > Insert_value) // Finds value greater than that at data[i] so it's earliest swap (stays in order)
-        {
-          CorrectIndex = j; // Sets insert index
+      { if(data[j] > Insert_value) // Finds value greater than that at data[i] so it's earliest swap (stays in order)
+        { CorrectIndex = j; // Sets insert index
           Value = true; // Allows second for loop
-
-          j = i+1; // Breaks loop
-
-
-        }
+          j = i+1; } // Breaks loop
+          
       }
 
       for(int k = i; k > CorrectIndex && Value; k--)
-      {
-        data[k] = data[k-1];
+      { data[k] = data[k-1]; }
 
-
-      }
       data[CorrectIndex] = Insert_value;
-
-
-    //  System.out.println(Arrays.toString(data));
 
     }
   }
