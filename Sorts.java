@@ -53,18 +53,18 @@ public class Sorts{
 
     for(int i = 0; i < data.length; i++)
     {
-      int CorrectIndex = 0;
-      int Insert_value = data[i];
-      boolean Value = false;
+      int CorrectIndex = i; // initalized at 0
+      int Insert_value = data[i]; // The insert value
+      boolean Value = false; // Recalls if an insert should happen
 
       for (int j = 0; j < i; j++)
       {
-        if(data[j] > Insert_value)
+        if(data[j] > Insert_value) // Finds value greater than that at data[i] so it's earliest swap (stays in order)
         {
-          CorrectIndex = j;
-          Value = true;
+          CorrectIndex = j; // Sets insert index
+          Value = true; // Allows second for loop
 
-          j = i+1;
+          j = i+1; // Breaks loop
 
 
         }
@@ -76,11 +76,8 @@ public class Sorts{
 
 
       }
+      data[CorrectIndex] = Insert_value;
 
-      if(Value)
-      {
-        data[CorrectIndex] = Insert_value;
-      }
 
     //  System.out.println(Arrays.toString(data));
 
