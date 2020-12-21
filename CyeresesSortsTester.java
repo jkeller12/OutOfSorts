@@ -26,7 +26,7 @@ public class CyeresesSortsTester {
 		return newCases;
 	}
 
-	//This is a lonely unused function boi :(
+	//This is a lonely unused function llama :(
 	public static boolean isSorted(int[] data) {
 		for (int i = 1; i < data.length; i++) {
 			if (data[i-1] > data[i]) {
@@ -39,8 +39,8 @@ public class CyeresesSortsTester {
 	public static int[] generateRandomArray() {
 		Random rand = new Random();
 
-		int[] data = new int[100];
-		for (int i = 0; i < 100; i++) {
+		int[] data = new int[rand.nextInt(101)];
+		for (int i = 0; i < data.length; i++) {
 			data[i] = rand.nextInt(2000) - 1000;
 		}
 		return data;
@@ -48,9 +48,12 @@ public class CyeresesSortsTester {
 	}
 
 	public static int[][] generateTestCases() {
-		int[][] a = new int[100][100];
+		int[][] a = new int[100][];
+		int[] arr;
 		for (int i = 0; i < 100; i++) {
-			a[i] = generateRandomArray();
+			arr = generateRandomArray();
+			a[i] = new int[arr.length];
+			a[i] = arr;
 		}
 		return a;
 	}
@@ -77,7 +80,7 @@ public class CyeresesSortsTester {
 		}
 		return success;
 	}
-/*
+
 	public boolean selectionSortTester() {
 		int[][] data = TestCasesCopyMachine(testCases);
 		boolean success = true;
@@ -123,35 +126,33 @@ public class CyeresesSortsTester {
 		}
 		return success;
 	}
-*/
+
 	public boolean daUltimateTester() {
 		if (! bubbleSortTester()) {
 			return false;
 		}
-		/*
 		if (! selectionSortTester()) {
 			return false;
 		}
 		if (! insertionSortTester()) {
 			return false;
-		}*/
+		}
 		return true;
-
 	}
 
 	public static void main(String[] args) {
 
-		CyeresesSortsTester isYouEpicSorterBoiTester = new CyeresesSortsTester();
+		CyeresesSortsTester isYouEpicSorterLlamaTester = new CyeresesSortsTester();
 
-		System.out.println("\n// I will determine if you is an Epic Sorter Boi...\n");
+		System.out.println("\n// I will determine if you is an Epic Sorter Llama...\n");
 
-		boolean isYouEpicSorterBoi = isYouEpicSorterBoiTester.daUltimateTester();
+		boolean isYouEpicSorterLlama = isYouEpicSorterLlamaTester.daUltimateTester();
 
 		System.out.println("\n// My ultimate consensus...\n");
-		if (isYouEpicSorterBoi) {
-			System.out.println("boolean isYouEpicSorterBoi = true;");
+		if (isYouEpicSorterLlama) {
+			System.out.println("boolean isYouEpicSorterLlama = true;");
 		} else {
-			System.out.println("boolean isYouEpicSorterBoi = false;");
+			System.out.println("boolean isYouEpicSorterLlama = false;");
 		}
 
 	}

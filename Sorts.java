@@ -53,25 +53,36 @@ public class Sorts{
 
     for(int i = 0; i < data.length; i++)
     {
-      System.out.println("Somethings happenig");
       int CorrectIndex = 0;
-      //int Insert_value = data[i]; // The value getting inserted
       int Insert_value = data[i];
+      boolean Value = false;
 
       for (int j = 0; j < i; j++)
       {
-        if( data[j] > Insert_value)
+        if(data[j] > Insert_value)
         {
           CorrectIndex = j;
+          Value = true;
+
           j = i+1;
+
+
         }
       }
-      for(int k = i; k > CorrectIndex; k--)
+
+      for(int k = i; k > CorrectIndex && Value; k--)
       {
         data[k] = data[k-1];
 
+
       }
-      data[CorrectIndex] = Insert_value;
+
+      if(Value)
+      {
+        data[CorrectIndex] = Insert_value;
+      }
+
+    //  System.out.println(Arrays.toString(data));
 
     }
   }
