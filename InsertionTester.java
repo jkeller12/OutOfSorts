@@ -1,7 +1,7 @@
-import java.util.Arrays;
 import java.util.Random;
+import java.util.Arrays;
 
-public class BubbleTester {
+public class InsertionTester {
 	private static boolean DEBUG = false;
 
 	public static void main(String[] args) {
@@ -18,13 +18,11 @@ public class BubbleTester {
 	}
 
 	public static void manualEvaluation() {
-		TesterMethods.tester("manualEvaluation");
-
 		TesterMethods.tester("expectedPrints EXPECTS YOU TO PRINT PER SORT CYCLE");
 //		Sorts.main(new String[1]);
 
 		int[][] sorts = {
-			{5, 1, 12, -5, 16},
+			{4, 3, 2, 10, 12, 1, 5, 6},
 			{2, 3, 4, 5, 1},
 			{6, 1, 2, 3, 4, 5},
 			{1, 2, 3, 4, 5},
@@ -35,23 +33,35 @@ public class BubbleTester {
 
 		int[][][] expectedPrints = {
 			{
-				{5, 1, 12, -5, 16},
-				{1, 5, -5, 12, 16},
-				{1, -5, 5, 12, 16},
-				{-5, 1, 5, 12, 16}
+				{4, 3, 2, 10, 12, 1, 5, 6},
+				{3, 4, 2, 10, 12, 1, 5, 6},
+				{2, 3, 4, 10, 12, 1, 5, 6},//35d index compared is 4, which is why there's 3 lines o this and not 2.
+				{2, 3, 4, 10, 12, 1, 5, 6},
+				{2, 3, 4, 10, 12, 1, 5, 6},
+				{1, 2, 3, 4, 10, 12, 5, 6},
+				{1, 2, 3, 4, 5, 10, 12, 6},
+				{1, 2, 3, 4, 5, 6, 10, 12},
 			},
 			{
 				{2, 3, 4, 5, 1},
-				{2, 3, 4, 1, 5},
-				{2, 3, 1, 4, 5},
-				{2, 1, 3, 4, 5},
-				{1, 2, 3, 4, 5}
+				{2, 3, 4, 5, 1},
+				{2, 3, 4, 5, 1},
+				{2, 3, 4, 5, 1},
+				{1, 2, 3, 4, 5},
 			},
 			{
 				{6, 1, 2, 3, 4, 5},
-				{1, 2, 3, 4, 5, 6}
+				{1, 6, 2, 3, 4, 5},
+				{1, 2, 6, 3, 4, 5},
+				{1, 2, 3, 6, 4, 5},
+				{1, 2, 3, 4, 6, 5},
+				{1, 2, 3, 4, 5, 6},
 			},
 			{
+				{1, 2, 3, 4, 5},
+				{1, 2, 3, 4, 5},
+				{1, 2, 3, 4, 5},
+				{1, 2, 3, 4, 5},
 				{1, 2, 3, 4, 5},
 			},
 			{
@@ -62,29 +72,23 @@ public class BubbleTester {
 			},
 			{
 				{5, 4, 3, 2, 1},
-				{4, 3, 2, 1, 5},
-				{3, 2, 1, 4, 5},
-				{2, 1, 3, 4, 5},
+				{4, 5, 3, 2, 1},
+				{3, 4, 5, 2, 1},
+				{2, 3, 4, 5, 1},
 				{1, 2, 3, 4, 5}
-			}
+			},
 		};
 
 		for (int test = 0; test < sorts.length; test++) {
-			System.out.println("bubblePrint");
-			Sorts.bubbleSort(sorts[test]);
+			System.out.println("insertionPrint");
+			Sorts.insertionSort(sorts[test]);
 
 			System.out.println("expectedPrints");
 			for (int line = 0; line < expectedPrints[test].length; line++) {
 				System.out.println(Arrays.toString(expectedPrints[test][line]));
 			}
 
-			if (Arrays.equals(expectedPrints[test][expectedPrints[test].length-1], sorts[test])) {
-				TesterMethods.passMessage(test);
-			} else {
-				TesterMethods.errorMessage(test, Arrays.toString(expectedPrints[test][expectedPrints[test].length-1]), Arrays.toString(sorts[test]));
-			}
 		}
-
 		System.out.println("expectedPrints EVALUATE YOURSELF");
 	}
 
@@ -108,7 +112,7 @@ public class BubbleTester {
 				System.out.println(Arrays.toString(expected));
 			}
 
-			Sorts.bubbleSort(sort);
+			Sorts.insertionSort(sort);
 			Arrays.sort(expected);
 
 			if (DEBUG) {
